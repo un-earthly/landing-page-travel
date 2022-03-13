@@ -1,0 +1,30 @@
+@media (min-width:320px) and (max-width:599px) {
+    nav{
+        font-size: 10px;
+    }
+    nav h1{
+        letter-spacing: 2px;
+    }
+    ul{
+        letter-spacing: 1px;
+    }
+    ul li a{
+        margin-left: .4rem;
+    }
+    .place__location{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore__location{
+        border-radius: 5px;
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    .place__img h2{
+        font-size: 20px;
+    }
+}
+@media (min-width:600px) and (max-width:1024px) {
+    .place__location{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,156 @@
+/* 
+Font
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cookie&family=Neucha&family=Patrick+Hand&family=Sacramento&family=Satisfy&family=Tangerine&display=swap');
+
+*,::before,::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+a,li{
+    color: currentColor;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: rgb(197, 197, 197);
+    background-color: rgb(29, 29, 29);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7rem;
+    border-bottom: 1px solid lemonchiffon;
+}
+nav h1{
+    line-height: 3rem;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px rgba(240, 128, 128, 0.5);
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cookie', cursive;
+    letter-spacing: 3px;
+}
+ul li a{
+    margin-left: 2rem;
+    position: relative;
+    transition: 0.6s;
+}
+ul li a:hover{
+    color: lightcoral;
+}
+ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: lightcoral;
+    transition: 0.6s;
+}
+ul li a:hover:after{
+    width: 100%;
+}
+.active{
+    color: lightcoral;
+}
+main{
+    font-family: 'Neucha', cursive;
+}
+section{
+    width: 80vw;
+    margin: 10px auto;
+}
+.place__location{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.place__img{
+    position: relative;
+}
+.fade__layer{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    position: absolute;
+}
+.place__img:hover .fade__layer{
+    height: 100%;
+}
+.place__img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.explore__location{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Neucha';
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-width: 0;
+    border-radius: 10px;
+    color: lightgoldenrodyellow;
+    padding: 10px 22px;
+    font-size: 1.4rem;
+    transition: .5s;
+    opacity: 0;
+    cursor: pointer;
+}
+.place__img:hover .explore__location{
+    opacity: 100%;
+    border-color: lightcoral;
+    border-width: 1px;
+}
+.explore__location:hover{
+    box-shadow: 0 0 15px 2px darkorange;
+    color: lightsalmon;
+}
+.place__img h2{
+    font-family: 'Cookie', cursive;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 0;
+    transition: .7s;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.place__img:hover h2{
+    opacity: 100%;
+}
+.effectOnHover:hover{
+    transition: 0.2s;
+    color: lightgreen;
+    animation: blast 5s linear forwards;
+}
+
+@keyframes blast {
+    0% {
+        letter-spacing:0.1em;
+        opacity:1;
+    }
+    100% {
+        letter-spacing:1em;
+        opacity:0;
+    }
+}
